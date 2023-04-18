@@ -1,11 +1,10 @@
-## Recap
+# Recap
 
 1. components (layout, navbar, footer, starter template)
 2. building asset (npm install, npm i bootstrap)
-3. rotte 
+3. rotte
 4. controller
 5. viste
-
 
 # FORM
 
@@ -23,4 +22,4 @@ Qui siamo in presenza di richieste di tipo GET. Stiamo mandando i dati in query 
 
 E' un insieme di coppie chiave valore divise dalla &.
 
-<!-- http://127.0.0.1/search ? nome_chiave = valore & nome_chiave = valore -->
+<http://127.0.0.1/search> ? nome_chiave = valore & nome_chiave = valore

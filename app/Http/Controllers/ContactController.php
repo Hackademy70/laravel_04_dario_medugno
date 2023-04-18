@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
     public function contactPage() {
-       
+ 
         return view('contacts');
     
     }
 }
+
+
+

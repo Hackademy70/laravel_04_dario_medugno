@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -75,6 +76,28 @@ class PublicController extends Controller
         ];
         
         public function showHomePage() {
-        return view('welcome', ['struments' => $this->struments]);
-       }
+        
+          return view('welcome', ['struments' => $this->struments]);
+       
+        }
+
+        public function showStrument($id) {
+        
+          dd($id);
+       
+        }
+
+        public function searchStrument(Request $request) {
+          $filterStruments = [];
+          $chiaveRicerca = $request->query('searchKey');
+
+          foreach($this->struments as $strument){
+           if(Str::contains(strtolower($strument['name']), strtolower($chiaveRicerca)) ){
+                     $filterStruments[] = $strument;
+           }
+        }
+
+        return view('searchres', ['struments' => $filterStruments, 'chiaveRicerca' => $chiaveRicerca]);
+
+        }
 }

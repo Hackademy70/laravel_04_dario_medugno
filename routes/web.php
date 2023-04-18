@@ -16,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'showHomePage'])->name('homepage');
 
+Route::get('/strument/show/{id}', [PublicController::class, 'showStrument'])->name('strument.show');
+
+Route::get('/search', [PublicController::class, 'searchStrument'])->name('strument.search');
+
+Route::get('/contact-us', [ContactController::class, 'contactPage'])->name('contactus');
+
 

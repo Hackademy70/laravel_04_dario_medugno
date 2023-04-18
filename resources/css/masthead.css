@@ -6,3 +6,12 @@
     background-position:center;
     background-repeat: no-repeat;
   }
+  
+  .custom-word{
+    color: orange;
+  }
+
+  .navbar-brand{
+    color: black;
+  }
+

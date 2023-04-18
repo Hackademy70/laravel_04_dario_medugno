@@ -2,10 +2,12 @@
     <img src="/img/{{ $strumentImg }}" class="card-img-top" alt="{{ $strumentName }}">
     <div class="card-body">
       <h5 class="card-title">{{ $strumentName }}</h5>
-      <p class="card-text d-flex justify-content-between">
-        <span>Categoria: {{ $strumentCategory }}</span>
-        <span>Descrizione: {{ $strumentAbstract }}</span>
+      <p class="card-text d-flex justify-content-space-between">
+          <span>Descrizione: {!! Str::limit($strumentAbstract, 18) !!}</span>
       </p>
-      <a href="#" class="btn btn-primary">Scopri di più</a>
+      <p>
+        <span>Categoria: {{ $strumentCategory }}</span>
+      </p>
+      <a href="{{ route('strument.show', ['id' => $strumentId ])}}" class="btn btn-primary">Scopri di più</a>
     </div>
   </div>

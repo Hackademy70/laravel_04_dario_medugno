@@ -23,3 +23,33 @@ Qui siamo in presenza di richieste di tipo GET. Stiamo mandando i dati in query 
 E' un insieme di coppie chiave valore divise dalla &.
 
 <http://127.0.0.1/search> ? nome_chiave = valore & nome_chiave = valore
+
+-> nelle richieste di tipo POST i dati non viaggiano in query string ma vengono inglobati all'interno del body della 
+   richiesta.
+
+CSRF -> Cross Site Request Forgery
+
+@csrf -> inserisce un token attraverso la direttiva blade 
+
+# Invio Mail
+
+1. creare un mailable: php artisan make:mail ContactMail
+
+2. Servizio che usa Laravel per inviare le email: MAILTRAP.
+
+3. Istruzione per invio email: Mail::to()->send();
+
+  - to()  -> indichiamo a quale indirizzo devo inviare
+  - sned() -> indichiamo COSA inviare -> quale oggetto? 
+
+
+
+
+
+
+# Passaggi Form
+
+Rotta -> Controller -> ritorna una vista.
+Quando invio i dati dal form scatta un'altra rotta che esegue un'altra funzione () che prende i dati
+
+All'interno della ContactSend() devo fare qualcosa con questi dati: li stampo, oppure li do in pasto ad un oggetto che è in grado di inviare email.

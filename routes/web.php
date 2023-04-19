@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,7 @@ Route::get('/strument/show/{id}', [PublicController::class, 'showStrument'])->na
 Route::get('/search', [PublicController::class, 'searchStrument'])->name('strument.search');
 
 Route::get('/contact-us', [ContactController::class, 'contactPage'])->name('contactus');
+
+Route::post('/contact-send', [ContactController::class, 'contactSend'])->name('contact.send');
 
 
